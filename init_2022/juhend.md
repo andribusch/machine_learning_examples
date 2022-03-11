@@ -7,6 +7,11 @@ https://github.com/andribusch/machine_learning_examples/tree/master/init_2022/wi
 
 ### 2. Määra igale veinile (reale) juhuslik arv. Reasta juhuslikud arvud (funktsioon RANK())
 
+**Hint: Rank funktsiooni kasutamine**
+```
+=RANK(O2;$O$2:$O$179)
+```
+
 ### 3. Määra, kui palju andmeid on treeningandmetes (nt 70%) ning eralda need eraldi töölehtedele (worksheets).
 
 ### 4. Arvutame iga test-veini kauguse treening-veinist - tulemuseks kauguste tabel "Distances" 
@@ -38,9 +43,10 @@ https://github.com/andribusch/machine_learning_examples/tree/master/init_2022/wi
 - Ennustame iga veini jaoks, mis klassi see kuulub
 - 
 
-**Hint: Kasuta seda koodi, et saada ennustus. NB! See on k=2 jaoks**
+**Hint: Kasuta seda koodi, et saada ennustus. NB! See on k=4 jaoks**
 ```
-=IFS($B$1=1,$'Nearest neighbors'.B2,$B$1=2,IFERROR(INDEX($'Nearest neighbors'.B2:C2,MODE(MATCH($'Nearest neighbors'.B2:C2, $'Nearest neighbors'.B2:C2,0))),$'Nearest neighbors'.B2))
+
+=IFS($B$1=1;'Nearest neighbors'!B6;$B$1=2;IFERROR(INDEX('Nearest neighbors'!B6:C6;MODE(MATCH('Nearest neighbors'!B6:C6; 'Nearest neighbors'!B6:C6;0)));'Nearest neighbors'!B6);$B$1=3;IFERROR(INDEX('Nearest neighbors'!B6:D6;MODE(MATCH('Nearest neighbors'!B6:D6; 'Nearest neighbors'!B6:D6;0)));'Nearest neighbors'!B6);$B$1=4;IFERROR(INDEX('Nearest neighbors'!B6:E6;MODE(MATCH('Nearest neighbors'!B6:E6; 'Nearest neighbors'!B6:E6;0)));'Nearest neighbors'!B6))
 ```
 
 **Mis oli tegelik klass**
