@@ -1,12 +1,15 @@
 # Juhend K-lähima naabri ülesandeks
 
-1. Tõmba alla "wines_data.xlsx" ja ava Excelis
+### 1. Tõmba alla "wines_data.xlsx" ja ava Excelis
 
-2. Määra igale veinile (reale) juhuslik arv. Reasta juhuslikud arvud (funktsioon RANK())
+Siin samas kaustas:
+https://github.com/andribusch/machine_learning_examples/tree/master/init_2022/wines_dataset.xlsx
 
-3. Määra, kui palju andmeid on treeningandmetes (nt 70%) ning eralda need eraldi töölehtedele (worksheets).
+### 2. Määra igale veinile (reale) juhuslik arv. Reasta juhuslikud arvud (funktsioon RANK())
 
-4. Arvutame iga test-veini kauguse treening-veinist - tulemuseks kauguste tabel "Distances" 
+### 3. Määra, kui palju andmeid on treeningandmetes (nt 70%) ning eralda need eraldi töölehtedele (worksheets).
+
+### 4. Arvutame iga test-veini kauguse treening-veinist - tulemuseks kauguste tabel "Distances" 
 	- Tee tabel, kus päised
 	- read: Test objektid
 	- Veerud: Treening objektid
@@ -18,7 +21,7 @@
 ```
 
 
-5. Lähimate naabrite arvutamine
+### 5. Lähimate naabrite arvutamine
 	- Leiame igale testveinile k-lähimat naabri treeningveinide hulgast
 	- Vaatame, mis "klassi" need naabrid on
 	- Võtame populaarseima ja see ongi meie ennustus!
@@ -29,7 +32,7 @@
 ```
 *Funktsioonis SMALL, väärtus 1 näitab, et 1. väikseim väärtus. See on vaja asendada igas tulbas vastavalt 2, 3 jne.*
 	
-6. Testime mudelit!
+### 6. Testime mudelit!
 
 - Tee uus tööleht "KNN model" nt
 - Ennustame iga veini jaoks, mis klassi see kuulub
